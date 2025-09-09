@@ -1,6 +1,27 @@
+import { useEffect, useState } from "react";
+
 const Navbar = () => {
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 60) {
+        setShow(true);
+      } else if (window.scrollY > lastScrollY) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <nav className="fixed top-14 left-0 w-full z-50">
+    <nav className={`fixed top-14 left-0 w-full z-50 transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-[300px]"}`}>
       <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
