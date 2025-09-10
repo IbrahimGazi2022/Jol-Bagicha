@@ -89,7 +89,7 @@ const Slider = () => {
                                         src={slide.image}
                                         alt="Plants"
                                         className="max-h-full max-w-full object-contain"
-                                        style={{ width: "auto", height: "auto", maxHeight: "500px" }}
+                                        style={{ width: "auto", height: "auto", maxHeight: "550px" }}
                                     />
                                 </div>
                             ))}

@@ -5,7 +5,8 @@ const AnnouncementBar = () => {
     const lines: string[] = [
         "Welcome to the Jol Bagicha",
         "Opening Hours: 9 AM - 6 PM",
-        "Contact: 01732 570 530",
+        "Contact: 01965 546 785",
+        "Email: jolbagicha@gmail.com",
         "Hello Everyone! Get 25% Off All Products Today!"
     ];
 
@@ -37,6 +38,39 @@ const AnnouncementBar = () => {
                         {lines[currLine]}
                     </motion.div>
                 </AnimatePresence>
+
+                {/* Social Icons */}
+                <div className="flex items-center space-x-4 absolute right-7">
+
+                    {/* Facebook */}
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="/images/social/facebook.svg"
+                            alt="Facebook"
+                            className="w-5 h-5 md:w-10 md:h-10 hover:scale-110 transition-transform"
+                        />
+                    </a>
+
+                    {/* YouTube */}
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="/images/social/youtube.svg"
+                            alt="YouTube"
+                            className="w-5 h-5 md:w-7 md:h-7 hover:scale-110 transition-transform"
+                        />
+                    </a>
+
+                    {/* Twitter */}
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="/images/social/twitter.svg"
+                            alt="Twitter"
+                            className="w-5 h-5 md:w-7 md:h-7 hover:scale-110 transition-transform"
+                        />
+                    </a>
+
+
+                </div>
             </div>
         </div>
     );

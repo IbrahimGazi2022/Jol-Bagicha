@@ -20,3 +20,29 @@ body {
   --main-text-color: #354E33;
   --text-color: #fef08a;
 }
+
+
+.section-title {
+  display: inline-block; 
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 70px; 
+  height: 2px;
+  background-color: #354E33;
+  transform: translateY(-50%);
+}
+
+.section-title::before {
+  right: 100%;
+  margin-right: 20px; 
+}
+
+.section-title::after {
+  left: 100%;
+  margin-left: 20px; 
+}
