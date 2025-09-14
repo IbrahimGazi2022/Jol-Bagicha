@@ -10,8 +10,8 @@ const Navbar = () => {
         setShow(true);
       } else if (window.scrollY > lastScrollY) {
         setShow(false);
-      } else if (lastScrollY - window.scrollY > 60) {
-        setShow(true); 
+      } else {
+        setShow(false);
       }
       setLastScrollY(window.scrollY);
     };
@@ -19,6 +19,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
 
   return (
     <nav className={`fixed top-14 left-0 w-full z-50 transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-[300px]"}`}>

@@ -27,7 +27,7 @@ const NewProducts = () => {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 {products.map((product) => (
                     <div key={product.id} className="flex flex-col items-center">
                         <div className="h-64 w-full flex items-center justify-center">
