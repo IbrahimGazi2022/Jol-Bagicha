@@ -4,6 +4,7 @@ import Slider from "./Slider/Slider";
 import NewProducts from "./NewProducts/NewProducts";
 import Category from "./Category/Category";
 import Footer from "./Footer/Footer";
+import SingleProductPage from "./SingleProductPage/SingleProductPage";
 
 export {
     AnnouncementBar,
@@ -11,5 +12,6 @@ export {
     Slider,
     NewProducts,
     Category,
-    Footer
+    Footer,
+    SingleProductPage
 }

@@ -39,7 +39,7 @@ const Slider = () => {
     };
 
     return (
-        <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+        <div className="relative w-full h-[500px] md:h-[700px] lg:h-[800px] overflow-hidden">
             <Navbar />
             {/* Background Image */}
             <div

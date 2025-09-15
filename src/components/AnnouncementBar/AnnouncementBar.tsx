@@ -24,7 +24,7 @@ const AnnouncementBar = () => {
 
     return (
         <div className="w-full bg-gradient-to-r from-[#d8f1e4] to-[#d9f4e2] flex justify-start overflow-hidden border-b border-green-200">
-            <div className="w-[1480px] px-4 md:px-6 lg:px-8 h-10 md:h-12 lg:h-10 flex items-center justify-start relative mx-auto">
+            <div className="w-[1480px] px-4 md:px-6 lg:px-8 h-10 md:h-12 lg:h-10 flex items-center justify-between relative mx-auto">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currLine}
@@ -32,7 +32,7 @@ const AnnouncementBar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
                         transition={{ duration: 0.5 }}
-                        className="absolute w-full text-center md:text-left text-sm md:text-base lg:text-md font-medium text-green-900 tracking-wide md:tracking-wider flex items-center justify-center md:justify-start capitalize"
+                        className="text-center md:text-left text-sm md:text-base lg:text-md font-medium text-green-900 tracking-wide md:tracking-wider flex items-center md:justify-start capitalize"
                     >
                         <span className="mr-2 md:mr-1.5 text-lg md:text-xl lg:text-xl">🌿</span>
                         {lines[currLine]}
@@ -47,7 +47,7 @@ const AnnouncementBar = () => {
                         <img
                             src="/images/social/facebook.svg"
                             alt="Facebook"
-                            className="w-5 h-5 md:w-10 md:h-10 hover:scale-110 transition-transform"
+                            className="w-7.5 h-7.5 md:w-10 md:h-10 hover:scale-110 transition-transform"
                         />
                     </a>
 
