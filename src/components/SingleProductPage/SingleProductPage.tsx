@@ -4,7 +4,6 @@ import { products } from "../../data/products";
 import {
     FaStar,
     FaHeart,
-    FaSyncAlt,
     FaShippingFast,
     FaLock,
     FaRegHeart
@@ -26,13 +25,12 @@ export default function SingleProductPage() {
             <Navbar className="-mt-10" />
             <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 mt-[130px]">
 
-
                 {/* Left Side - Product Image */}
                 <div>
                     <img
                         src={product.img}
                         alt={product.title}
-                        className="w-full h-auto rounded-2xl shadow-md"
+                        className="w-full h-auto rounded-2xl shadow-md p-10"
                     />
                 </div>
 
@@ -40,8 +38,8 @@ export default function SingleProductPage() {
                 <div className="flex flex-col space-y-4">
 
                     {/* Title & Price */}
-                    <h2 className="text-2xl font-bold">{product.title}</h2>
-                    <p className="text-green-600 text-xl font-semibold">${product.price}</p>
+                    <h2 className="text-2xl text-[var(--main-text-color)] font-bold tracking-wide">{product.title}</h2>
+                    <p className="text-[] text-2xl font-semibold">{product.price}</p>
 
                     {/* Rating */}
                     <div className="flex items-center gap-2">
@@ -55,13 +53,6 @@ export default function SingleProductPage() {
 
                     {/* Color & Size Selectors */}
                     <div className="space-y-2">
-                        <div className="flex items-center gap-4">
-                            <span className="font-semibold">Color:</span>
-                            <select className="border rounded-md px-2 py-1">
-                                <option>Black & White</option>
-                                <option>Green</option>
-                            </select>
-                        </div>
                         <div className="flex items-center gap-4">
                             <span className="font-semibold">Size:</span>
                             <select className="border rounded-md px-2 py-1">
@@ -80,7 +71,7 @@ export default function SingleProductPage() {
                     {/* Quantity & Actions */}
                     <div className="flex items-center gap-4 mt-3">
                         <div className="flex items-center border rounded-md">
-                            <button className="px-3 py-1"
+                            <button className="px-2.5 py-1.5"
                                 onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
                             >
                                 -
@@ -93,41 +84,33 @@ export default function SingleProductPage() {
                             </button>
                         </div>
 
-                        <button className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition">
+                        <button className="bg-[#354E33] text-white px-6 py-2 rounded-md hover:bg-green-700 transition">
                             ADD TO CART
                         </button>
 
-                        <button className="p-3 border rounded-md hover:bg-gray-100">
+                        <button className="p-2.5 border rounded-md hover:bg-gray-100">
                             <FaRegHeart />
-                        </button>
-
-                        <button className="p-3 border rounded-md hover:bg-gray-100">
-                            <FaSyncAlt />
                         </button>
                     </div>
 
                     {/* Features */}
                     <div className="grid grid-cols-3 gap-4 mt-6">
-                        <div className="flex flex-col items-center text-center p-4 border rounded-lg shadow-sm">
-                            <FaShippingFast className="text-green-600 text-xl mb-1" />
+                        <div className="flex items-center gap-3 p-4 rounded-lg shadow-sm bg-[#D8F2E2]">
+                            <FaShippingFast size={40} className="text-[var(--main-text-color)]" />
                             <span className="text-sm font-semibold">Free Shipping</span>
                         </div>
-                        <div className="flex flex-col items-center text-center p-4 border rounded-lg shadow-sm">
-                            <FaLock className="text-green-600 text-xl mb-1" />
+
+                        <div className="flex items-center gap-3 p-4 bg-[#D8F2E2] rounded-lg shadow-sm">
+                            <FaLock size={40} className="text-[var(--main-text-color)]" />
                             <span className="text-sm font-semibold">Safe Payment</span>
                         </div>
-                        <div className="flex flex-col items-center text-center p-4 border rounded-lg shadow-sm">
-                            <FaHeart className="text-green-600 text-xl mb-1" />
+
+                        <div className="flex items-center gap-3 p-4 bg-[#D8F2E2] rounded-lg shadow-sm">
+                            <FaHeart size={40} className="text-[var(--main-text-color)]" />
                             <span className="text-sm font-semibold">Safe Guarantee</span>
                         </div>
                     </div>
 
-                    {/* Meta Information */}
-                    <div className="text-sm text-gray-600 mt-6 space-y-1">
-                        <p><span className="font-semibold">SKU:</span> Ch-256xl</p>
-                        <p><span className="font-semibold">Categories:</span> Office, Home</p>
-                        <p><span className="font-semibold">Tags:</span> Furniture</p>
-                    </div>
                 </div>
             </div>
         </>

@@ -1,8 +1,12 @@
 const Footer = () => {
     return (
-        <footer className="h-84 md:h-96 lg:h-[350px] sm:bg-cover bg-contains text-black font-bold" style={{ backgroundImage: "url('/images/footer/footer.webp')" }} >
+        <footer
+            className="h-auto lg:h-[350px] sm:bg-cover bg-contains text-black font-bold"
+            style={{ backgroundImage: "url('/images/footer/footer.webp')" }}
+        >
+            {/* Top part: Footer columns */}
             <div className="bg-opacity-60 w-full max-w-[1380px] mx-auto px-4 py-14 
-    grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center sm:text-left">
+          grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center sm:text-left">
 
                 {/* Column 1: Logo */}
                 <div className="hidden sm:block">
@@ -46,19 +50,33 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Column 5: Follow Us */}
+                {/* Column 5: Location */}
                 <div>
-                    <h1 className="mb-4 text-lg md:text-xl">Follow Us</h1>
-                    <div className="flex justify-center sm:justify-start space-x-4 mb-4">
-                        <img src="/images/social/facebook.svg" alt="Facebook" className="w-6 h-6 md:w-7 md:h-7" />
-                        <img src="/images/social/twitter.svg" alt="Twitter" className="w-6 h-6 md:w-7 md:h-7" />
-                        <img src="/images/social/youtube.svg" alt="YouTube" className="w-6 h-6 md:w-7 md:h-7" />
-                    </div>
+                    <h1 className="mb-4 text-lg md:text-xl">Office Location</h1>
+                    <p className="text-sm md:text-base font-normal mb-2">
+                        BK Main Road, Khulna,<br /> Bangladesh
+                    </p>
+                    <h1 className="mb-2 text-lg md:text-xl">Send a Message</h1>
                     <p className="text-sm md:text-base font-normal">
-                        © {new Date().getFullYear()} Your Company
+                        jolbagicha@gmail.com
                     </p>
                 </div>
             </div>
+
+            {/* Bottom part: Copyright */}
+            <div className="border-t border-gray-300 py-4 text-center text-sm md:text-base font-normal">
+                © {new Date().getFullYear()} Jol Bagicha. All Rights Reserved. |
+                Designed & Developed by{" "}
+                <a
+                    href="https://ibrahim-the-coder.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--main-text-color)] hover:underline font-bold"
+                >
+                    Ibrahim - The Coder
+                </a>
+            </div>
+
 
         </footer>
     );
