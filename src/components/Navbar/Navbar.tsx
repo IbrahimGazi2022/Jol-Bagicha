@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
+interface NavbarProps {
+  className?: string;
+}
+
+const Navbar = ({ className }: NavbarProps) => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -22,7 +26,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`fixed top-14 left-0 w-full z-50 transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-[300px]"}`}>
+    <nav className={`fixed top-14 left-0 w-full z-50 transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-[300px]"} ${className}`}>
       <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}

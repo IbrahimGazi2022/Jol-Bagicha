@@ -1,19 +1,5 @@
 import { Link } from "react-router-dom";
-
-const products = [
-    { id: 1, title: "American Marigold", img: "/images/NewProduct/4.jpg", price: "$15.49" },
-    { id: 2, title: "Black Eyed Susan", img: "/images/NewProduct/2.jpg", price: "$10.99" },
-    { id: 3, title: "Bleeding Heart", img: "/images/NewProduct/3.jpg", price: "$12.49" },
-    { id: 4, title: "Garden Phlox", img: "/images/NewProduct/4.jpg", price: "$9.99" },
-    { id: 1, title: "American Marigold", img: "/images/NewProduct/4.jpg", price: "$15.49" },
-    { id: 2, title: "Black Eyed Susan", img: "/images/NewProduct/2.jpg", price: "$10.99" },
-    { id: 3, title: "Bleeding Heart", img: "/images/NewProduct/3.jpg", price: "$12.49" },
-    { id: 4, title: "Garden Phlox", img: "/images/NewProduct/4.jpg", price: "$9.99" },
-    { id: 1, title: "American Marigold", img: "/images/NewProduct/4.jpg", price: "$15.49" },
-    { id: 2, title: "Black Eyed Susan", img: "/images/NewProduct/2.jpg", price: "$10.99" },
-    { id: 3, title: "Bleeding Heart", img: "/images/NewProduct/3.jpg", price: "$12.49" },
-    { id: 4, title: "Garden Phlox", img: "/images/NewProduct/4.jpg", price: "$9.99" },
-];
+import { products } from '../../data/products';
 
 const NewProducts = () => {
     return (
@@ -32,13 +18,16 @@ const NewProducts = () => {
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 {products.map((product) => (
                     <div key={product.id} className="flex flex-col items-center">
-                        <Link to={`/product/${product.id}`} className="h-64 w-full flex items-center justify-center">
-                            <img
-                                src={product.img}
-                                alt={product.title}
-                                className="h-full object-cover"
-                            />
+                        <Link to={`/product/${product.id}`} className="flex items-center justify-center w-full">
+                            <div className="w-[200px] h-[200px] flex items-center justify-center overflow-hidden rounded-lg">
+                                <img
+                                    src={product.img}
+                                    alt={product.title}
+                                    className="max-w-full max-h-full object-contain"
+                                />
+                            </div>
                         </Link>
+
                         <div className="mt-2 text-center">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.title}</h3>
                             <p className="text-[#354E33] font-bold mb-2">{product.price}</p>
