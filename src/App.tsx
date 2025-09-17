@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AnnouncementBar, Category, Footer, NewProducts, Slider, SingleProductPage } from "./components";
+import { AnnouncementBar, Category, Footer, NewProducts, Slider, SingleProductPage, DisProducts } from "./components";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
               <AnnouncementBar />
               <Slider />
               <Category />
+              <DisProducts />
               <NewProducts />
               <Footer />
             </>
