@@ -15,7 +15,7 @@ const Slider = () => {
         {
             title: "GREEN & FRESH COLLECTION",
             heading: "BRING NATURE CLOSER TO YOUR LIFE",
-            description: "From air-purifying plants to decorative greens, find the perfect plants to create a calming and vibrant environment.",
+            description: "Explore a wide selection of healthy, premium plants to bring freshness and beauty into your home or garden.",
             buttonText: "Shop Now",
             image: "/images/slider/2.webp",
         },
@@ -39,7 +39,7 @@ const Slider = () => {
     };
 
     return (
-        <div className="relative w-full h-[500px] md:h-[700px] lg:h-[800px] overflow-hidden">
+        <div className="relative w-full h-[500px] md:h-[700px] lg:h-[800px] overflow-hidden slider-height">
             <Navbar />
             {/* Background Image */}
             <div
@@ -59,16 +59,16 @@ const Slider = () => {
                                     }`}
                             >
                                 <div className="max-w-2xl bg-opacity-90 p-6 md:p-8">
-                                    <h3 className="inline-block bg-[#CAD4CC] text-[var(--main-text-color)] px-3 py-1 text-[15px] mb-4 font-semibold tracking-[2px] rounded-full">
+                                    <h3 className="inline-block bg-[#CAD4CC] text-[var(--main-text-color)] px-3 py-1 text-[15px] mb-4 font-semibold tracking-[2px] rounded-full heading">
                                         {slide.title}
                                     </h3>
-                                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--main-text-color)] mb-4 tracking-[1.5px] leading-[1.2]">
+                                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--main-text-color)] mb-4 tracking-[1.5px] leading-[1.2] title">
                                         {slide.heading}
                                     </h1>
                                     <p className="text-gray-600 text-base md:text-lg mb-6 leading-relaxed tracking-[1px]">
                                         {slide.description}
                                     </p>
-                                    <button className="bg-[#354E33] text-white font-bold py-3 px-8 rounded-full text-lg transition-colors duration-300">
+                                    <button className="bg-[#354E33] text-white font-bold py-3 px-8 rounded-full text-lg transition-colors duration-300 mobile-button">
                                         {slide.buttonText}
                                     </button>
                                 </div>

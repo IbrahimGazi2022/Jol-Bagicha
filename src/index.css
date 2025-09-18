@@ -46,3 +46,37 @@ body {
   left: 100%;
   margin-left: 20px; 
 }
+
+@media (min-width: 320px) and (max-width: 639px) {
+  /* slider section */
+  .heading {
+    margin-top: 50px;
+    font-size: 10px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .mobile-button {
+    padding: 10px 20px;
+  }
+  .slider-height {
+    height: 400px;
+  }
+
+  /* discount section */
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px; 
+  height: 2px;
+  background-color: #354E33;
+  transform: translateY(-50%);
+}
+
+}
