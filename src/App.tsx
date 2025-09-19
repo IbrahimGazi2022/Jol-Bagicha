@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AnnouncementBar, Category, Footer, NewProducts, Slider, SingleProductPage, DisProducts } from "./components";
+import { AnnouncementBar, Category, Footer, NewProducts, Slider, SingleProductPage, DisProducts, AllProductsPage } from "./components";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           }
         />
         <Route path="/product/:id" element={<SingleProductPage />} />
+        <Route path="/page/AllProductsPage" element={<AllProductsPage />} />
       </Routes>
     </Router>
   );

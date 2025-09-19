@@ -6,6 +6,7 @@ import Category from "./Category/Category";
 import Footer from "./Footer/Footer";
 import SingleProductPage from "./SingleProductPage/SingleProductPage";
 import DisProducts from "./DisProducts/DisProducts";
+import AllProductsPage from "./AllProductsPage/AllProductsPage";
 
 export {
     AnnouncementBar,
@@ -15,5 +16,6 @@ export {
     Category,
     Footer,
     SingleProductPage,
-    DisProducts
+    DisProducts,
+    AllProductsPage
 }

@@ -40,9 +40,8 @@ const Navbar = ({ className }: NavbarProps) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 lg:space-x-8 mr-4">
-            <a href="#" className="text-sm md:text-[12px] lg:text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold">HOME</a>
-            <a href="#" className="text-sm md:text-[12px] lg:text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold">PLANTS</a>
-            <a href="#" className="text-sm md:text-[12px] lg:text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold">PLANTED TANK</a>
+            <a href="/" className="text-sm md:text-[12px] lg:text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold">HOME</a>
+            <a href="/page/AllProductsPage" className="text-sm md:text-[12px] lg:text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold">PRODUCTS</a>
             <a href="#" className="text-sm md:text-[12px] lg:text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold">ACCESSORIES</a>
             <a href="#" className="text-sm md:text-[12px] lg:text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold">ABOUT</a>
             <a href="#" className="text-sm md:text-[12px] lg:text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold">CONTACT</a>

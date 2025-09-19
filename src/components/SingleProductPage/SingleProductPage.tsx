@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/products";
 import {
@@ -9,12 +9,18 @@ import {
     FaRegHeart
 } from "react-icons/fa";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 export default function SingleProductPage() {
     const { id } = useParams();
     const productId = Number(id);
     const product = products.find((p) => p.id === productId);
     const [quantity, setQuantity] = useState(1);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
 
     if (!product) {
         return <p className="text-center mt-10">Product not found</p>;
@@ -23,14 +29,14 @@ export default function SingleProductPage() {
     return (
         <>
             <Navbar className="-mt-10" />
-            <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 mt-[130px]">
+            <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 lg:mt-[130px] md:mb-10">
 
                 {/* Left Side - Product Image */}
-                <div>
+                <div className="flex justify-center ">
                     <img
                         src={product.img}
                         alt={product.title}
-                        className="w-full h-auto rounded-2xl shadow-md p-10"
+                        className="w-[300px] h-[300px] mt-10 lg:mt-0 max-w-md md:h-[400px] md:w-[400px] object-cover rounded-2xl shadow-md p-10"
                     />
                 </div>
 
@@ -113,6 +119,7 @@ export default function SingleProductPage() {
 
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
