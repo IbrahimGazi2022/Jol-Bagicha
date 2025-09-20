@@ -54,7 +54,7 @@ const Footer = () => {
                 <div>
                     <h1 className="mb-4 text-lg md:text-xl">Office Location</h1>
                     <p className="text-sm md:text-base font-normal mb-2">
-                        BK Main Road, Khulna,<br /> Bangladesh
+                        West Tootpara Main Road, Khulna Sadar, Khulna
                     </p>
                     <h1 className="mb-2 text-lg md:text-xl">Send a Message</h1>
                     <p className="text-sm md:text-base font-normal">
@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom part: Copyright */}
-            <div className="border-t border-gray-300 py-4 text-center text-sm md:text-base font-normal">
+            <div className="border-t border-gray-300 py-6 text-center text-sm md:text-base font-normal">
                 © {new Date().getFullYear()} Jol Bagicha. All Rights Reserved. |
                 Designed & Developed by{" "}
                 <a
