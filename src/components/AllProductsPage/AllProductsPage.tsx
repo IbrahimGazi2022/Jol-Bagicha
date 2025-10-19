@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { products } from '../../data/products';
 import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 const categories = ["All", "Electronics", "Clothes", "Shoes", "Accessories"];
 
 const AllProductsPage = () => {
     return (
         <>
-            <div className="max-w-6xl mx-auto px-4 py-12">
+            <Navbar className="-mt-10" />
+            <div className="max-w-6xl mx-auto px-4 py-12 md:mt-[70px] mt-[35px]">
                 {/* Page Header */}
                 <div className="text-center mb-8">
                     <h2 className="relative text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-gray-800 mb-4 section-title">
@@ -20,15 +22,16 @@ const AllProductsPage = () => {
                 </div>
 
                 {/* Sidebar + Products Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:mr-10">
 
                     {/* Sticky Sidebar */}
-                    <div className="col-span-1 sticky top-20 self-start hidden sm:block">
-                        <h3 className="text-lg font-bold text-gray-800 mb-4">Categories</h3>
+                    <div className="col-span-1 md:sticky self-start bg-[#F6F7FB] p-10 ml-12">
+                        <h3 className="text-lg font-bold text-[#6c6c6c] order-2 md:order-1 mb-4 text-center uppercase ">Categories</h3>
                         <ul className="space-y-2">
                             {categories.map((category, index) => (
                                 <li key={index}>
-                                    <button className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-100 transition">
+                                    <button className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-100 transition  border-b-1 border-b-[#dee2e6]">
+                                        <span className="mr-2">➜</span>
                                         {category}
                                     </button>
                                 </li>
