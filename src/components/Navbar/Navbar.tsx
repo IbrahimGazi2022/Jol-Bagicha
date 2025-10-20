@@ -113,7 +113,7 @@ const Navbar = ({ className }: NavbarProps) => {
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${mobileOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setMobileOpen(false)}></div>
+        <div className="absolute inset-0 bg-[#AAAAAA] bg-opacity-50" onClick={() => setMobileOpen(false)}></div>
       </div>
 
       {/* Mobile Menu */}

@@ -3,12 +3,30 @@ import { products } from '../../data/products';
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
-const categories = ["All", "Electronics", "Clothes", "Shoes", "Accessories"];
+const categories = [
+    "All",
+    "Snake Plant",
+    "Spider Plant",
+    "Peace Lily",
+    "Aloe Vera",
+    "Areca Palm",
+    "Rubber Plant",
+    "ZZ Plant",
+    "Pothos",
+    "Chinese",
+    "Boston Fern",
+    "Money Plant",
+    "Dracaena",
+    "Philodendron",
+    "Parlor Palm",
+    "English Ivy"
+];
+
 
 const AllProductsPage = () => {
     return (
         <>
-            <Navbar className="-mt-10" />
+            <Navbar className="-mt-12" />
             <div className="max-w-6xl mx-auto px-4 py-12 md:mt-[70px] mt-[35px]">
                 {/* Page Header */}
                 <div className="text-center mb-8">
@@ -25,12 +43,12 @@ const AllProductsPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:mr-10">
 
                     {/* Sticky Sidebar */}
-                    <div className="col-span-1 md:sticky self-start bg-[#F6F7FB] p-10 ml-12">
+                    <div className="col-span-1 md:sticky self-start bg-[#F6F7FB] px-5 py-10 ml-12">
                         <h3 className="text-lg font-bold text-[#6c6c6c] order-2 md:order-1 mb-4 text-center uppercase ">Categories</h3>
                         <ul className="space-y-2">
                             {categories.map((category, index) => (
                                 <li key={index}>
-                                    <button className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-100 transition  border-b-1 border-b-[#dee2e6]">
+                                    <button className="w-full text-left px-0 py-2 rounded-md hover:bg-gray-100 transition  border-b-1 border-b-[#dee2e6]">
                                         <span className="mr-2">➜</span>
                                         {category}
                                     </button>
