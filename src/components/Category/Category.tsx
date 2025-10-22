@@ -1,13 +1,13 @@
 const Category = () => {
     const categories = [
-        { title: "Terrarium Plants", img: "/images/NewProduct/5.jpg" },
+        { title: "Terrarium Plants", img: "/images/NewProduct/5.webp" },
         { title: "Aquatic Plants", img: "/images/NewProduct/3.jpg" },
-        { title: "Wood Section", img: "/images/NewProduct/7.jpg" },
-        { title: "Fish Food", img: "/images/NewProduct/food.jpg" },
-        { title: "Planted Aquariums", img: "/images/NewProduct/tank.jpg" },
-        { title: "Rock & Stone", img: "/images/NewProduct/stone.jpg" },
-        { title: "Aquarium Accessories", img: "/images/NewProduct/acessories.jpg" },
-        { title: "Fish", img: "/images/NewProduct/fish.png" },
+        { title: "Wood Section", img: "/images/NewProduct/7.webp" },
+        { title: "Fish Food", img: "/images/NewProduct/food.webp" },
+        { title: "Planted Aquariums", img: "/images/NewProduct/tank.webp" },
+        { title: "Rock & Stone", img: "/images/NewProduct/stone.webp" },
+        { title: "Aquarium Accessories", img: "/images/NewProduct/acessories.webp" },
+        { title: "Fish", img: "/images/NewProduct/fish.webp" },
     ];
 
     return (
