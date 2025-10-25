@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../redux/store";
 
 interface NavbarProps {
   className?: string;
@@ -8,6 +10,7 @@ const Navbar = ({ className }: NavbarProps) => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const totalQuantity = useSelector((state: RootState) => state.cart.totalQuantity);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,7 +90,9 @@ const Navbar = ({ className }: NavbarProps) => {
                   />
                 </svg>
                 {/* Optional: Add badge for cart items */}
-                <span className="absolute -top-1 -right-1 bg-[#354E33] text-white font-bold rounded-full text-xs w-5 h-5 flex items-center justify-center">5</span>
+                <span className="absolute -top-1 -right-1 bg-[#354E33] text-white font-bold rounded-full text-xs w-5 h-5 flex items-center justify-center">
+                  {totalQuantity}
+                </span>
               </button>
 
               {/* Mobile menu button */}
@@ -179,7 +184,7 @@ const Navbar = ({ className }: NavbarProps) => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.293a1 1 0 00.707 1.707h12a1 1 0 00.707-1.707L17 13M7 13V6a1 1 0 011-1h8a1 1 0 011 1v7"
                 />
               </svg>
-              View Cart (5)
+              View Cart {totalQuantity}
             </button>
           </div>
         </div>

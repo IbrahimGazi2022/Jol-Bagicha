@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/products";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
+import type { AppDispatch } from "../../redux/store";
+
 import {
     FaStar,
     FaHeart,
@@ -16,11 +20,26 @@ export default function SingleProductPage() {
     const productId = Number(id);
     const product = products.find((p) => p.id === productId);
     const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch<AppDispatch>();
+
+    // ADD TO CART FUNCTION
+    const handleAddToCart = () => {
+        if (product) {
+            dispatch(addToCart({
+                id: product.id,
+                title: product.title,
+                price: Number(product.price),
+                img: product.img,
+                quantity: quantity,
+            }));
+        }
+    };
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
-      
+    }, []);
+
 
     if (!product) {
         return <p className="text-center mt-10">Product not found</p>;
@@ -45,7 +64,7 @@ export default function SingleProductPage() {
 
                     {/* Title & Price */}
                     <h2 className="text-2xl text-[var(--main-text-color)] font-bold tracking-wide">{product.title}</h2>
-                    <p className="text-[] text-2xl font-semibold">{product.price}</p>
+                    <p className="text-[] text-2xl font-semibold">$ {product.price}</p>
 
                     {/* Rating */}
                     <div className="flex items-center gap-2">
@@ -90,7 +109,7 @@ export default function SingleProductPage() {
                             </button>
                         </div>
 
-                        <button className="bg-[#354E33] text-white px-6 py-2 rounded-md hover:bg-green-700 transition">
+                        <button onClick={handleAddToCart} className="bg-[#354E33] text-white px-6 py-2 rounded-md hover:bg-green-700 transition">
                             ADD TO CART
                         </button>
 

@@ -35,7 +35,7 @@ const DisProducts = () => {
 
                         <div className="mt-2 text-center">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.title}</h3>
-                            <p className="text-[#354E33] font-bold mb-2">{product.price}</p>
+                            <p className="text-[#354E33] font-bold mb-2">$ {product.price}</p>
                             <div className="flex justify-center space-x-1">
                                 {[...Array(5)].map((_, i) => (
                                     <svg

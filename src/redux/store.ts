@@ -1,12 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import loaderReducer from "./loaderSlice";
+import cartReducer from "./cartSlice";
 
 export const store = configureStore({
     reducer: {
-        loader: loaderReducer
+        loader: loaderReducer,
+        cart: cartReducer
     }
 })
 
-// store থেকে type derive করছি — future use এর জন্য
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
