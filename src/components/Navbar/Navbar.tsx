@@ -151,6 +151,9 @@ const Navbar = ({ className }: NavbarProps) => {
             <a href="#" className="text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold py-2" onClick={handleLinkClick}>
               CONTACT
             </a>
+            <a href="/page/login" className="text-lg text-[var(--main-text-color)] hover:text-green-600 font-bold py-2" onClick={handleLinkClick}>
+              LOGIN
+            </a>
           </div>
 
           {/* Mobile Search & Cart */}

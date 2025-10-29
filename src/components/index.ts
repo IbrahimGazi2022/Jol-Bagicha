@@ -7,6 +7,8 @@ import Footer from "./Footer/Footer";
 import SingleProductPage from "./SingleProductPage/SingleProductPage";
 import DisProducts from "./DisProducts/DisProducts";
 import AllProductsPage from "./AllProductsPage/AllProductsPage";
+import RegisterForm from "./Auth/RegisterForm";
+import LoginForm from "./Auth/LoginForm";
 
 export {
     AnnouncementBar,
@@ -17,5 +19,7 @@ export {
     Footer,
     SingleProductPage,
     DisProducts,
-    AllProductsPage
+    AllProductsPage,
+    RegisterForm,
+    LoginForm
 }

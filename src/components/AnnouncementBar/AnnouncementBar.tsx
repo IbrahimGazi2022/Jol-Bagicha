@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const AnnouncementBar = () => {
     const lines: string[] = [
@@ -68,8 +69,14 @@ const AnnouncementBar = () => {
                         />
                     </a>
 
-
+                    {/* LOGIN BUTTON */}
+                    <Link to="/page/login">
+                        <button type="button" className="font-bold text-[#354E33] mr-4 tracking-wider cursor-pointer">
+                            LOGIN | REGISTER
+                        </button>
+                    </Link>
                 </div>
+
             </div>
         </div>
     );
